@@ -1,7 +1,7 @@
 var alreadyChecked = "";
 var classTypes = [];
 var itemsSelected = [];
-var totPrice = 0.0;
+var totPrice = parseFloat(getCookie("currentTotal"),10);
 var userTot = 0.0;
 var itemsPrices = [];
 var ItemNames = [];
@@ -16,8 +16,8 @@ var minimum = 0;
     }
     setCookie("merchantId", merchant);
     populateRestaurantName(merchant);
-    var toGoal = getCookie("toGoal");
-    totPrice = (parseFloat(toGoal.substring(1), 10));
+   // var toGoal = getCookie("toGoal");
+    //totPrice = (parseFloat(toGoal.substring(1), 10));
 
     var merchantURL = "http://sandbox.delivery.com/merchant/"+merchant+"?client_id=MTExNTBjNTgyOGQ0NTFiOTc0ZWI1MTg1MGQ3NmYxYjE3";
     var res = httpGet(merchantURL);
@@ -270,5 +270,5 @@ function getCookie(cname) {
 }
 (function () {
         var elem = document.getElementById("welcome");
-        elem.innerHTML = "Hi, "+getCookie("Email")+"!";
+        elem.innerHTML = "Hi, "+getCookie("Name")+"!";
     })();

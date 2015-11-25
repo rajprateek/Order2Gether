@@ -72,8 +72,10 @@ function placeOrder(){
     // var params1 = "order%5BprimaryUser%5D=" + email + "&order%5Blocation%5D=" + location + "&order%5BisPlaced%5D=0" + "&order%5Breqd_total%5D="+getCookie("min") + "&order%5BmerchantID%5D=" + merchantID;
     params2 = "user_order%5BUsername%5D="+email+"&user_order%5BListofitems%5D="+items+"&user_order%5BTotal%5D="+ getCookie("total");
     var OrderID = getCookie("OrderId");
-    params2 += "&user_order%5BOrderID%5D=" + orderID;
+    params2 += "&user_order%5BOrderID%5D=" + OrderID;
     var response = httpPost2(url2, params2);
+     window.alert("Order is live!");
+
     
        
     
