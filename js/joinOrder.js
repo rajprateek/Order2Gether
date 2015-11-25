@@ -19,10 +19,10 @@ function httpGet(theUrl)
     return xmlHttp.responseText;
 };
 
-function addRowToTable(id, name, toGoal, distance){
+function addRowToTable(id,orderId, name, toGoal, distance){
     var table2 = document.getElementById("ordersNearby");
     var row2 = table2.insertRow(table2.rows.length);
-    row2.id = id;
+    row2.id = id+"/"+orderId;
     var cell1 = row2.insertCell(0);
     var cell2 = row2.insertCell(1);
     var cell3 = row2.insertCell(2);
@@ -62,7 +62,7 @@ function handledata(jsonObj){
         var distance = order["distance"];
         //var currentTotal = order["currentTotal"];
         var name = populateRestaurantName(merchantID);
-        addRowToTable(merchantID, name , reqdTotal-currentTotal, distance);
+        addRowToTable(merchantID, orderID, name , reqdTotal-currentTotal, distance);
     }
 
 };
@@ -114,7 +114,11 @@ function makeRowsClickable() {
                   var id = myrow.id;
                   var goal = myrow.cells[2].innerHTML;
                   setCookie("toGoal", goal);
-                  var newUrl = 'restaurantMenu.html?&merchant=' + id;
+                  var arr = respURL.split("/");
+                  var OrderId = arr[arr.length - 1];
+                  var merchantId = arr[0];
+                  setCookie("OrderId", OrderId);
+                  var newUrl = 'restaurantMenuJoinOrder.html?&merchant=' + merchantId;
                   document.location.href = newUrl;
               };
           } (row);
