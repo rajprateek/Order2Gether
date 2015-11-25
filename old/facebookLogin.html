@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Login/Sign-In</title>
+    
+    
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!-- Optional theme --> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <style>
+      h1   {color:white; text-align: center}
+    </style>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script src="js/facebookLogin.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+     <style>
+       .temp{
+      width:250px;
+      padding:10px;
+      height:50px;
+      position:relative;
+      font-size: 27px;
+      font-family:"Verdana";
+      border:1px white solid;
+      margin-top:-50px;
+      margin-left:-142px;
+      margin-bottom: 20px;
+      top:50%;
+      left:50%;}
+
+      .temp2{
+      width:1000px;
+      padding:10px;
+      height:30px;
+      position:relative;
+      font-size: 20px;
+      font-family:"Verdana";
+      color:white;
+      margin-top:-10px;
+      margin-left:-205px;
+      margin-bottom: 50px;
+      top:50%;
+      left:50%;
+      }
+        .button1 {
+           width: 10%;
+           height: 40%;
+           margin-left: 43%;
+           
+        }
+        
+     
+    </style>
+    
+  </head>
+
+  <body background="pizza2.jpg">
+      
+      <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=328548527269329";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+     
+      <script src="js/login.js"></script>
+      
+        <div class="container">
+              <div class="container">
+                <nav class="navbar navbar-inverse navbar-fixed-top">
+                  <div  class="container-fluid">
+                    <div class="navbar-header">
+                      <a class="navbar-brand" href="#">Order Together</a>
+                    </div>
+                  </div>
+                </nav>
+                <h1 class="temp">Order Together</h1>
+                <h3 class="temp2">Socially Coordinated Food Ordering</h3>
+
+                <div class="fb-login-button btn-primary button1" style="margin-top: 20px;" data-max-rows="5" data-size="xlarge" data-show-faces="false" scope="email" data-auto-logout-link="false" ></div>
+        </div>     
+  </body>
+</html>
