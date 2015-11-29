@@ -2,7 +2,7 @@
     
     (function(){
 		var domain = document.location.toString();
-		if(domain.indexOf("username")>=0){
+		if(domain.indexOf("venmoId")>=0){
 			console.log("yes");
 			document.location = "page2.html";
 		}

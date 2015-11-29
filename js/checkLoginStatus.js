@@ -33,7 +33,7 @@ var loaded = false;
   window.fbAsyncInit = function () {
       loaded = true; 
       FB.init({
-          appId: '328548527269329',
+          appId: '967487063325006',
           cookie: false,  // enable cookies to allow the server to access 
           // the session
           xfbml: true,  // parse social plugins on this page
@@ -83,7 +83,7 @@ var loaded = false;
   function checkStatus() {
       if (!loaded) return;
       FB.init({
-          appId: '328548527269329',
+          appId: '967487063325006',
           cookie: false,  // enable cookies to allow the server to access 
           // the session
           xfbml: true,  // parse social plugins on this page
