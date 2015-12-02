@@ -103,8 +103,8 @@ function httpGet(theUrl)
 
 function httpPost2(theUrl, params)
 {
-    console.log("post method called.."+theUrl+params);
-    //var xhr = new XMLHttpRequest();
+    window.alert(theUrl + params);
+   //console.log(theUrl+params);
     var xhr2 = new XMLHttpRequest();
 
     xhr2.open('POST', theUrl + params, true);
@@ -114,7 +114,7 @@ function httpPost2(theUrl, params)
 
 function httpPost(theUrl, params)
 {
-    console.log("post method called.."+theUrl + params);
+    console.log(theUrl + params);
     //var xhr = new XMLHttpRequest();
 
 

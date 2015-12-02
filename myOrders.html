@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html >
   <head>
         <meta charset="UTF-8">
@@ -70,9 +69,9 @@
 
     </nav>
 
-    <div class="container"><h1 style="margin-top: 80px" id="rname">Your Orders </h1>
-   </div>
-      <div class="container"> 
+      <div class="container"><h1 style="margin-top: 80px" id="rname">Your Orders </h1>
+      </div>
+      <div id="minionTable" style="visibility: hidden" class="container"> 
               <table id = "order" class="table table-striped MainTable" style="background:white; margin-top:25px">
                 <thead>
                   <tr>
@@ -87,7 +86,19 @@
                       </tr>
                   </tbody>
               </table>
-              </div>
+      </div>
+
+       <div id="primaryTable" style="visibility: hidden" class="container"> 
+              <table id = "order2" class="table  MainTable" style="background:white; margin-top:25px">
+              </table>
+           
+
+      </div>
+      <button id="venmo" style="visibility: hidden" class="btn btn-primary" onclick="sendVenmoRequests();">Send Venmo Requests</button>
+      <button id="placeOrder" style="visibility: hidden" class="btn btn-primary" onclick="placeOrder();">Place Order</button>
+
+      
+
 
 
 

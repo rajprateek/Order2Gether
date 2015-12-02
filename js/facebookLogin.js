@@ -14,7 +14,7 @@
 
   // This function is called when someone finishes with the Login
   // Button.  See the onlogin handler attached to it in the sample
-  // code below.
+  // code below.VENMO
   function checkLoginState() {
     FB.getLoginStatus(function(response) {
       statusChangeCallback(response);
@@ -84,8 +84,8 @@
 
                 var Userurl = "http://104.131.244.218/users?";
                 var venmoId = document.getElementById("venmoId").value;
-
-                var res = httpPost(Userurl, response.name, response.id, venmoId);
+                var phone = document.getElementById("phoneNum").value;
+                var res = httpPost(Userurl, response.name, response.id, venmoId, phone);
                 document.getElementById("login-form").setAttribute("action", "page2.html");
                 //e.preventDefault();
             });
@@ -103,12 +103,23 @@
   }
 
   function httpGet(url, id){
-      return 0;
+      var url = "http://104.131.244.218/isduplicate?fbid=" + id;
+      return httpGet2(url);
   }
-  function httpPost(theUrl, theUsername, theEmail, theVenmoId)
+
+function httpGet2(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send(null);
+    return xmlHttp.responseText;
+};
+
+  function httpPost(theUrl, theUsername, theEmail, theVenmoId, phone)
 {
     var xhr = new XMLHttpRequest();
-    var params = "user%5Bname%5D=" + theUsername + "&user%5Bemail%5D=" + theEmail + "&user%5BvenmoId%5D=" + theVenmoId;
+    var params = "user%5Bname%5D=" + theUsername + "&user%5Bemail%5D=" + theEmail + "&user%5BvenmoId%5D=" + theVenmoId + "&user%5Bphone%5D="+phone;
+    window.alert(params);
 	xhr.open('POST', theUrl + params, true);
 	xhr.send(params);
     return xhr.responseText;
