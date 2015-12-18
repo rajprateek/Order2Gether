@@ -1,3 +1,5 @@
-# Order2Gether- A socially coordinated foof ordering service
+# Order2Gether
+==
 
-Order2Gether- Website Code
+Order2Gether is a socially coordinated food ordering service.
+This repository contans its Frontend code (hosted on azure).
